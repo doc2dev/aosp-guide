@@ -1,5 +1,26 @@
 # Chapter 2: Development Environment & Workflow
 
+## Contents
+
+- [Introduction](#introduction)
+- [System Requirements](#system-requirements)
+- [Setting Up the Build Environment](#setting-up-the-build-environment)
+- [Downloading the AOSP Source](#downloading-the-aosp-source)
+- [Understanding Build Targets](#understanding-build-targets)
+- [Building AOSP](#building-aosp)
+- [Building Specific Modules](#building-specific-modules)
+- [Working with Build Environment Variables](#working-with-build-environment-variables)
+- [Flashing and Testing](#flashing-and-testing)
+- [Debugging Tools and Techniques](#debugging-tools-and-techniques)
+- [Development Workflow Best Practices](#development-workflow-best-practices)
+- [Optimizing Build Performance](#optimizing-build-performance)
+- [Troubleshooting Common Issues](#troubleshooting-common-issues)
+- [Advanced Build Configuration](#advanced-build-configuration)
+- [Development Environment Automation](#development-environment-automation)
+- [Key Takeaways](#key-takeaways)
+- [Next Steps](#next-steps)
+- [Quick Reference](#quick-reference)
+
 ## Introduction
 
 Building Android from source is significantly more complex than typical application development. You're not just compiling code—you're building an entire operating system with millions of lines of code, generating bootable system images, and managing a sophisticated build environment.

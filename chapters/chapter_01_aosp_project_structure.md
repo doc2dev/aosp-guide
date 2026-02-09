@@ -1,5 +1,21 @@
 # Chapter 1: AOSP Project Structure
 
+## Contents
+
+- [Introduction](#introduction)
+- [The AOSP Source Tree Overview](#the-aosp-source-tree-overview)
+- [Critical Directories Deep Dive](#critical-directories-deep-dive)
+- [Understanding the Build System](#understanding-the-build-system)
+- [The Repo Tool and Manifest](#the-repo-tool-and-manifest)
+- [Navigating the AOSP Codebase](#navigating-the-aosp-codebase)
+- [Build Artifacts and Output](#build-artifacts-and-output)
+- [System Partitions](#system-partitions)
+- [Source Code Organization by Layer](#source-code-organization-by-layer)
+- [Practical Navigation Exercise](#practical-navigation-exercise)
+- [Key Takeaways](#key-takeaways)
+- [Next Steps](#next-steps)
+- [Quick Reference](#quick-reference)
+
 ## Introduction
 
 Understanding the Android Open Source Project (AOSP) structure is fundamental to becoming an effective AOSP developer. Unlike Android app development where you work within a predefined framework, AOSP development requires intimate knowledge of how the entire Android system is organized, built, and deployed.

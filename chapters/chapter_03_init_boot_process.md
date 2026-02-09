@@ -1,5 +1,27 @@
 # Chapter 3: Android Init & Boot Process
 
+## Contents
+
+- [Introduction](#introduction)
+- [Boot Sequence Overview](#boot-sequence-overview)
+- [Stage 1: Boot ROM](#stage-1-boot-rom)
+- [Stage 2: Bootloader](#stage-2-bootloader)
+- [Stage 3: Linux Kernel](#stage-3-linux-kernel)
+- [Stage 4: Init Process](#stage-4-init-process)
+- [Actions in Init Language](#actions-in-init-language)
+- [Services in Init Language](#services-in-init-language)
+- [Real-World Init.rc Example](#real-world-initrc-example)
+- [Property System](#property-system)
+- [SELinux in Boot Context](#selinux-in-boot-context)
+- [Practical Example 1: Adding a Custom Init Service](#practical-example-1-adding-a-custom-init-service)
+- [Practical Example 2: Custom Boot Action](#practical-example-2-custom-boot-action)
+- [Debugging Init Issues](#debugging-init-issues)
+- [Boot Time Optimization](#boot-time-optimization)
+- [Advanced Init Features](#advanced-init-features)
+- [Key Takeaways](#key-takeaways)
+- [Next Steps](#next-steps)
+- [Quick Reference](#quick-reference)
+
 ## Introduction
 
 Understanding the Android boot process is fundamental to AOSP development. From the moment you press the power button to a fully functioning Android system, a complex sequence of events unfolds across multiple layers of software. Each stage has specific responsibilities, and understanding this flow allows you to customize boot behavior, add system services, debug boot issues, and optimize startup time.
