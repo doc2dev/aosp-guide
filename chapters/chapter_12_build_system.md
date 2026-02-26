@@ -1,5 +1,22 @@
 # Chapter 12: Build System Mastery
 
+## Contents
+
+- [Introduction](#introduction)
+- [Build System Evolution](#build-system-evolution)
+- [Android.bp Syntax](#androidbp-syntax)
+- [Build Configuration](#build-configuration)
+- [Module Dependencies](#module-dependencies)
+- [Compiler Flags](#compiler-flags)
+- [Advanced Build Features](#advanced-build-features)
+- [Build Performance Optimization](#build-performance-optimization)
+- [Practical Example 1: Custom Module with Dependencies](#practical-example-1-custom-module-with-dependencies)
+- [Practical Example 2: Build Variant Configuration](#practical-example-2-build-variant-configuration)
+- [Build System Debugging](#build-system-debugging)
+- [Key Takeaways](#key-takeaways)
+- [Quick Reference](#quick-reference)
+- [Conclusion](#conclusion)
+
 ## Introduction
 
 The Android build system is one of the most complex aspects of AOSP development. Understanding it deeply enables you to:

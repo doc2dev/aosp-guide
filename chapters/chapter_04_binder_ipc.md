@@ -1,5 +1,25 @@
 # Chapter 4: Binder IPC
 
+## Contents
+
+- [Introduction](#introduction)
+- [Why Binder? The IPC Problem](#why-binder-the-ipc-problem)
+- [Binder Architecture Overview](#binder-architecture-overview)
+- [Binder Communication Model](#binder-communication-model)
+- [The Binder Kernel Driver](#the-binder-kernel-driver)
+- [ServiceManager: The Name Service](#servicemanager-the-name-service)
+- [AIDL: Interface Definition Language](#aidl-interface-definition-language)
+- [Creating a Custom System Service](#creating-a-custom-system-service)
+- [Binder Security and Permissions](#binder-security-and-permissions)
+- [Death Recipients: Handling Client/Server Death](#death-recipients-handling-clientserver-death)
+- [Native Binder (C++)](#native-binder-c)
+- [Debugging Binder](#debugging-binder)
+- [Performance Considerations](#performance-considerations)
+- [HIDL: HAL Interface Definition Language](#hidl-hal-interface-definition-language)
+- [Key Takeaways](#key-takeaways)
+- [Next Steps](#next-steps)
+- [Quick Reference](#quick-reference)
+
 ## Introduction
 
 Binder is Android's primary Inter-Process Communication (IPC) mechanism. It's the foundation that enables apps to communicate with system services, allows system services to communicate with each other, and provides the infrastructure for Android's component model (Activities, Services, ContentProviders, BroadcastReceivers).

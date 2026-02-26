@@ -1,5 +1,20 @@
 # Chapter 10: Power Management & Battery
 
+## Contents
+
+- [Introduction](#introduction)
+- [Power Management Architecture](#power-management-architecture)
+- [PowerManagerService](#powermanagerservice)
+- [Wakelock System](#wakelock-system)
+- [Battery Monitoring](#battery-monitoring)
+- [Doze Mode and App Standby](#doze-mode-and-app-standby)
+- [Display Power Management](#display-power-management)
+- [Practical Example 1: Custom Power Profile](#practical-example-1-custom-power-profile)
+- [Practical Example 2: Wakelock Monitor](#practical-example-2-wakelock-monitor)
+- [Key Takeaways](#key-takeaways)
+- [Next Steps](#next-steps)
+- [Quick Reference](#quick-reference)
+
 ## Introduction
 
 Power management is critical for mobile devices. Android's power management system controls device power states, manages wakelocks, optimizes battery consumption, and provides battery statistics. Understanding this system is essential for:

@@ -1,5 +1,20 @@
 # Chapter 8: System UI & Framework UI
 
+## Contents
+
+- [Introduction](#introduction)
+- [SystemUI Architecture](#systemui-architecture)
+- [Status Bar Implementation](#status-bar-implementation)
+- [Quick Settings (QS)](#quick-settings-qs)
+- [Notifications](#notifications)
+- [Lock Screen (Keyguard)](#lock-screen-keyguard)
+- [Practical Example 1: Adding Custom Quick Settings Tile](#practical-example-1-adding-custom-quick-settings-tile)
+- [Practical Example 2: Custom Status Bar Icon](#practical-example-2-custom-status-bar-icon)
+- [SystemUI Theming](#systemui-theming)
+- [Key Takeaways](#key-takeaways)
+- [Next Steps](#next-steps)
+- [Quick Reference](#quick-reference)
+
 ## Introduction
 
 SystemUI is Android's system-level user interface framework that provides the status bar, notification shade, quick settings, lock screen, and other critical UI elements. Unlike application UI, SystemUI runs as a privileged system application with special permissions and direct access to system services.

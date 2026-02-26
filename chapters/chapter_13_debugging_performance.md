@@ -1,5 +1,24 @@
 # Chapter 13: Debugging & Performance
 
+## Contents
+
+- [Introduction](#introduction)
+- [Debugging Tools Overview](#debugging-tools-overview)
+- [Logcat Mastery](#logcat-mastery)
+- [System Tracing](#system-tracing)
+- [Crash Analysis](#crash-analysis)
+- [Memory Debugging](#memory-debugging)
+- [Performance Profiling](#performance-profiling)
+- [Dumpsys Deep Dive](#dumpsys-deep-dive)
+- [Performance Optimization](#performance-optimization)
+- [Practical Example: Debug Workflow](#practical-example-debug-workflow)
+- [Practical Example: Performance Issue](#practical-example-performance-issue)
+- [Debug Build Configuration](#debug-build-configuration)
+- [Advanced Debugging Techniques](#advanced-debugging-techniques)
+- [Quick Reference](#quick-reference)
+- [Key Takeaways](#key-takeaways)
+- [Conclusion](#conclusion)
+
 ## Introduction
 
 Debugging and performance optimization are essential skills for AOSP development. This chapter covers the tools, techniques, and methodologies for identifying and resolving issues in Android systems, as well as optimizing performance for production devices.

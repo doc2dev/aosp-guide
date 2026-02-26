@@ -1,5 +1,23 @@
 # Chapter 5: PackageManager & Application Lifecycle
 
+## Contents
+
+- [Introduction](#introduction)
+- [PackageManager Architecture](#packagemanager-architecture)
+- [PackageManager Startup](#packagemanager-startup)
+- [APK Structure and Parsing](#apk-structure-and-parsing)
+- [APK Installation Process](#apk-installation-process)
+- [Permission Management](#permission-management)
+- [Querying Package Information](#querying-package-information)
+- [Practical Example 1: Adding Custom Install-Time Checks](#practical-example-1-adding-custom-install-time-checks)
+- [Practical Example 2: Custom Permission Type](#practical-example-2-custom-permission-type)
+- [Package Update Mechanism](#package-update-mechanism)
+- [Package Deletion](#package-deletion)
+- [Broadcast Intents](#broadcast-intents)
+- [Key Takeaways](#key-takeaways)
+- [Next Steps](#next-steps)
+- [Quick Reference](#quick-reference)
+
 ## Introduction
 
 PackageManager is one of Android's most critical system services. It manages the entire lifecycle of applications—from installation and verification through runtime queries and uninstallation. Understanding PackageManager is essential for AOSP development because it:

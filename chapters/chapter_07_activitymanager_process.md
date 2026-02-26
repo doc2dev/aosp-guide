@@ -1,5 +1,20 @@
 # Chapter 7: ActivityManager & Process Management
 
+## Contents
+
+- [Introduction](#introduction)
+- [ActivityManagerService Architecture](#activitymanagerservice-architecture)
+- [Process Lifecycle](#process-lifecycle)
+- [Activity Stack Management](#activity-stack-management)
+- [Service Management](#service-management)
+- [Broadcast Management](#broadcast-management)
+- [ANR (Application Not Responding)](#anr-application-not-responding)
+- [Practical Example 1: Custom Process Priority Policy](#practical-example-1-custom-process-priority-policy)
+- [Practical Example 2: Activity Interceptor](#practical-example-2-activity-interceptor)
+- [Key Takeaways](#key-takeaways)
+- [Next Steps](#next-steps)
+- [Quick Reference](#quick-reference)
+
 ## Introduction
 
 ActivityManagerService (AMS) is the heart of Android's application framework. It manages the lifecycle of all application components (Activities, Services, BroadcastReceivers, ContentProviders), controls process creation and termination, handles task and back stack management, and enforces resource constraints through the Low Memory Killer.

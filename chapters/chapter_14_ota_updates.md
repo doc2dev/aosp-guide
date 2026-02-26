@@ -1,5 +1,23 @@
 # Chapter 14: OTA Updates & System Partitions
 
+## Contents
+
+- [Introduction](#introduction)
+- [Android Partition Architecture](#android-partition-architecture)
+- [A/B Seamless Updates](#ab-seamless-updates)
+- [OTA Package Structure](#ota-package-structure)
+- [Building OTA Packages](#building-ota-packages)
+- [Update Engine](#update-engine)
+- [Recovery System](#recovery-system)
+- [Verified Boot](#verified-boot)
+- [Practical Example: Custom OTA Server](#practical-example-custom-ota-server)
+- [Rollback Management](#rollback-management)
+- [OTA Testing](#ota-testing)
+- [Key Takeaways](#key-takeaways)
+- [Quick Reference](#quick-reference)
+- [Conclusion](#conclusion)
+- [Summary of All 14 Chapters](#summary-of-all-14-chapters)
+
 ## Introduction
 
 Over-The-Air (OTA) updates and partition management are critical for maintaining Android devices in production. Understanding these systems enables you to:

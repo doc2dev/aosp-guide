@@ -1,5 +1,21 @@
 # Chapter 6: WindowManager & SurfaceFlinger
 
+## Contents
+
+- [Introduction](#introduction)
+- [Display Architecture Overview](#display-architecture-overview)
+- [WindowManagerService Architecture](#windowmanagerservice-architecture)
+- [SurfaceFlinger Architecture](#surfaceflinger-architecture)
+- [Creating and Managing Windows](#creating-and-managing-windows)
+- [Practical Example 1: Custom Window Type with Special Behavior](#practical-example-1-custom-window-type-with-special-behavior)
+- [Practical Example 2: Custom Display Orientation Handling](#practical-example-2-custom-display-orientation-handling)
+- [Surface Management](#surface-management)
+- [Display Debugging and Analysis](#display-debugging-and-analysis)
+- [Performance Optimization](#performance-optimization)
+- [Key Takeaways](#key-takeaways)
+- [Next Steps](#next-steps)
+- [Quick Reference](#quick-reference)
+
 ## Introduction
 
 The display subsystem in Android is one of its most sophisticated components. Every pixel you see on screen passes through a complex pipeline involving WindowManager (for window management and layout) and SurfaceFlinger (for compositing and display). Understanding this system is crucial for:

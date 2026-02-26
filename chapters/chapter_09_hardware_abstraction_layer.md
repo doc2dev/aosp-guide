@@ -1,5 +1,20 @@
 # Chapter 9: Hardware Abstraction Layer (HAL)
 
+## Contents
+
+- [Introduction](#introduction)
+- [HAL Evolution](#hal-evolution)
+- [HAL Architecture Overview](#hal-architecture-overview)
+- [HIDL Fundamentals](#hidl-fundamentals)
+- [Client-Side Usage](#client-side-usage)
+- [AIDL HAL (Modern Approach)](#aidl-hal-modern-approach)
+- [Practical Example 1: Simple LED HAL](#practical-example-1-simple-led-hal)
+- [Practical Example 2: Extending Existing HAL](#practical-example-2-extending-existing-hal)
+- [VINTF (Vendor Interface)](#vintf-vendor-interface)
+- [Key Takeaways](#key-takeaways)
+- [Next Steps](#next-steps)
+- [Quick Reference](#quick-reference)
+
 ## Introduction
 
 The Hardware Abstraction Layer (HAL) is Android's interface between the framework and device hardware. It allows Android to remain hardware-agnostic while enabling device manufacturers to implement hardware-specific functionality without exposing proprietary code to the open-source framework.

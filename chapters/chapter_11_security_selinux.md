@@ -1,5 +1,23 @@
 # Chapter 11: Security & SELinux
 
+## Contents
+
+- [Introduction](#introduction)
+- [Android Security Model](#android-security-model)
+- [SELinux Fundamentals](#selinux-fundamentals)
+- [SELinux Policy Language](#selinux-policy-language)
+- [SELinux Policy Files](#selinux-policy-files)
+- [Writing SELinux Policy](#writing-selinux-policy)
+- [Debugging SELinux Denials](#debugging-selinux-denials)
+- [Practical Example 1: Secure Custom Service](#practical-example-1-secure-custom-service)
+- [Practical Example 2: HAL Service Policy](#practical-example-2-hal-service-policy)
+- [SELinux Best Practices](#selinux-best-practices)
+- [Common SELinux Issues](#common-selinux-issues)
+- [Verified Boot and dm-verity](#verified-boot-and-dm-verity)
+- [Key Takeaways](#key-takeaways)
+- [Quick Reference](#quick-reference)
+- [Conclusion](#conclusion)
+
 ## Introduction
 
 Security is fundamental to Android's architecture. SELinux (Security-Enhanced Linux) provides mandatory access control, enforcing security policies at the kernel level. Understanding Android's security model and SELinux is essential for:
