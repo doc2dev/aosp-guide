@@ -448,14 +448,12 @@ Recovery mode provides:
 # Via adb
 adb reboot recovery
 
-# Via bootloader
-adb reboot bootloader
-fastboot boot recovery.img
-
 # Programmatically
 String command = "--update_package=/data/ota_package/update.zip\n";
 RecoverySystem.installPackage(context, new File(packagePath));
 ```
+
+> **Cuttlefish note:** `adb reboot recovery` works directly. The bootloader-based method (`adb reboot bootloader` → `fastboot boot recovery.img`) requires a real bootloader and does not apply to Cuttlefish.
 
 ### Recovery UI
 
@@ -801,12 +799,9 @@ adb shell getprop ro.boot.slot_suffix
 # Switch to other slot
 adb shell bootctl set-active-boot-slot 1  # Switch to slot B
 adb reboot
-
-# Or from bootloader
-adb reboot bootloader
-fastboot set_active b
-fastboot reboot
 ```
+
+> **Cuttlefish note:** The `bootctl` + `adb reboot` approach works on Cuttlefish. The bootloader-based alternative (`adb reboot bootloader` → `fastboot set_active b`) is not applicable since Cuttlefish has no bootloader.
 
 ### Rollback Prevention
 
@@ -833,8 +828,9 @@ cp $OUT/target-files.zip target-files-v2.zip
 # 2. Generate OTA package
 ota_from_target_files -i target-files-v1.zip target-files-v2.zip ota.zip
 
-# 3. Flash first version
-fastboot flashall
+# 3. Launch Cuttlefish with v1 images
+stop_cvd
+launch_cvd
 
 # 4. Apply OTA
 adb push ota.zip /data/
@@ -884,16 +880,9 @@ done
 adb shell ls /dev/block/by-name/
 adb shell cat /proc/partitions
 adb shell df -h
-
-# Flash partitions
-fastboot flash boot boot.img
-fastboot flash system system.img
-fastboot flash vendor vendor.img
-
-# Erase partitions
-fastboot erase cache
-fastboot erase userdata
 ```
+
+> **Cuttlefish note:** `fastboot flash` and `fastboot erase` require a real bootloader and do not work on Cuttlefish. To apply new images, rebuild and relaunch the virtual device with `stop_cvd && launch_cvd`.
 
 ### OTA Commands
 

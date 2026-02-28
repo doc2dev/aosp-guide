@@ -1094,8 +1094,11 @@ PRODUCT_PACKAGES += \
 
 ### Step 4: Test the Configuration
 
+The workflow here depends on your target device.
+
+**On a physical device:**
 ```bash
-# Build and flash
+# Build and flash via fastboot
 m -j$(nproc)
 adb reboot bootloader
 fastboot flashall
@@ -1104,6 +1107,36 @@ fastboot flashall
 adb shell getprop | grep mydevice
 adb shell ls -l /data/mydevice
 adb logcat -s mydevice-setup
+```
+
+**On Cuttlefish (CVD):**
+
+Cuttlefish does not have a `bootloader.img`, so `adb reboot bootloader` is a no-op and `fastboot` cannot be used to flash images. Instead, rebuild the relevant images and relaunch the virtual device:
+
+```bash
+# Build the images
+m -j$(nproc)
+
+# Stop the running Cuttlefish instance
+stop_cvd
+
+# Relaunch with the new images (from $ANDROID_PRODUCT_OUT)
+launch_cvd
+
+# After boot, verify
+adb shell getprop | grep mydevice
+adb shell ls -l /data/mydevice
+adb logcat -s mydevice-setup
+```
+
+For quick iterative testing of init scripts and pushed binaries without a full relaunch, you can push files directly and use `adb reboot`:
+
+```bash
+adb root
+adb remount
+adb push $ANDROID_PRODUCT_OUT/vendor/bin/mydevice-monitor /vendor/bin/
+adb push device/mycompany/mydevice/init.mydevice.rc /vendor/etc/init/
+adb reboot
 ```
 
 ## Debugging Init Issues
