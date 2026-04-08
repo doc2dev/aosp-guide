@@ -666,8 +666,7 @@ public class ColorManagerService extends IColorManager.Stub {
 
 // Start ColorManagerService
 traceBeginAndSlog("StartColorManagerService");
-mSystemServiceManager.startService(ColorManagerService.class);
-ServiceManager.addService("color", 
+ServiceManager.addService("color",
         new ColorManagerService(mSystemContext));
 traceEnd();
 ```
